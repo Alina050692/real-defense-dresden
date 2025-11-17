@@ -1,0 +1,677 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --petrol: #005761;
+  --dunkelblau: #212d32;
+  --anthrazit: #3a3a3c;
+  --hellgrau: #e5e5e5;
+  --weiss: #ffffff;
+  --gelb: #b78d26;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--anthrazit);
+}
+
+/* Navigation */
+nav {
+  background: var(--dunkelblau);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 0;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+nav .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav img {
+  width: 200px;
+  max-width: 100%;
+  height: auto;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+nav li {
+  position: relative;
+}
+nav .dropdown {
+  position: relative;
+}
+
+nav .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: var(--dunkelblau);
+  min-width: 200px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  margin-top: 0.5rem;
+  z-index: 1001;
+}
+
+nav .dropdown:hover .dropdown-content {
+  display: block;
+}
+
+nav .dropdown-content a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: var(--weiss);
+  text-decoration: none;
+  transition: background 0.3s;
+}
+
+nav .dropdown-content a:hover {
+  background: var(--anthrazit);
+}
+
+nav .dropdown > a::after {
+  content: "  ▼";
+  font-size: 0.7rem;
+}
+
+nav a {
+  color: var(--weiss);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: var(--gelb);
+}
+
+/* Hero Section mit Video */
+#hero {
+  position: relative;
+  color: var(--weiss);
+  padding: 120px 2rem 80px;
+  text-align: center;
+  margin-top: 60px;
+  overflow: hidden;
+  min-height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#hero-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  object-fit: cover;
+}
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 79, 86, 0.75) 0%,
+    rgba(2, 71, 83, 0.85) 100%
+  );
+  z-index: 2;
+}
+
+#hero .container {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+}
+.hero-text {
+  flex: 1;
+  text-align: left;
+}
+#hero h1 {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+  text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+#hero p {
+  font-size: 1.4rem;
+  margin-bottom: 0;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.btn {
+  flex-shrink: 0;
+  display: inline-block;
+  padding: 1rem 2rem;
+  background: var(--petrol);
+  color: var(--weiss);
+  text-decoration: none;
+  border-radius: 30px;
+  transition: background 0.3s;
+  font-size: large;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background: var(--dunkelblau);
+}
+
+.btn-light {
+  background: var(--dunkelblau);
+  color: var(--weiss);
+}
+
+.btn-light:hover {
+  background: var(--gelb);
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* Sections */
+section {
+  padding: 80px 2rem;
+}
+
+section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--dunkelblau);
+}
+
+/* Über uns */
+#ueber-uns {
+  background: var(--weiss);
+}
+#ueber-uns .ueber-uns-flex {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.ueber-uns-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.ueber-uns-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+#ueber-uns .content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: justify;
+  font-size: 1.1rem;
+}
+
+/* Kurs-Details Sektionen */
+.kurs-detail {
+  padding: 80px 2rem;
+}
+
+.kurs-detail:nth-child(odd) {
+  background: var(--weiss);
+}
+
+.kurs-detail:nth-child(even) {
+  background: var(--hellgrau);
+}
+
+.kurs-detail h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--dunkelblau);
+}
+
+.kurs-detail-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kurs-detail-image {
+  flex: 0 0 45%;
+  max-width: 500px;
+}
+
+.kurs-detail-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+}
+
+.kurs-detail-text {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.kurs-detail-text h3 {
+  color: var(--petrol);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.kurs-detail-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+  text-align: justify;
+}
+
+.kurs-detail-text ul {
+  list-style: none;
+  padding: 0;
+}
+
+.kurs-detail-text ul li {
+  padding: 0.5rem 0;
+  font-size: 1.05rem;
+}
+
+.kurs-detail-text ul li:before {
+  content: "✓ ";
+  color: var(--petrol);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.kurs-info-box {
+  background: var(--petrol);
+  color: var(--weiss);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.kurs-info-box p {
+  text-align: left;
+  margin: 0.5rem 0;
+}
+
+.kurs-info-box strong {
+  display: inline-block;
+  min-width: 100px;
+}
+
+/* Kurse */
+#kurse {
+  background: var(--hellgrau);
+}
+
+.kurs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.kurs-card {
+  background: var(--weiss);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+
+.kurs-card:hover {
+  transform: translateY(-5px);
+}
+
+.kurs-card h3 {
+  color: var(--petrol);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.kurs-card ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+
+.kurs-card ul li:before {
+  content: "✓ ";
+  color: var(--petrol);
+  font-weight: bold;
+}
+
+/* Vorteile */
+#vorteile {
+  background: var(--hellgrau);
+}
+
+.vorteile-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.vorteil-item {
+  text-align: center;
+  padding: 1.5rem;
+}
+
+.vorteil-icon {
+  width: 80px;
+  height: 80px;
+  background: var(--petrol);
+  color: var(--weiss);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  margin: 0 auto 1rem;
+}
+
+.vorteil-item h3 {
+  color: var(--dunkelblau);
+  margin-bottom: 0.5rem;
+}
+
+/* Kontakt */
+#kontakt {
+  background: var(--anthrazit);
+  color: var(--weiss);
+}
+
+#kontakt h2 {
+  color: var(--weiss);
+}
+
+.kontakt-wrapper {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.kontakt-content {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.kontakt-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--weiss);
+}
+
+.kontakt-info {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+}
+
+.kontakt-info p {
+  margin: 1rem 0;
+}
+
+/* Buchungsformular */
+.buchungsformular {
+  background: var(--weiss);
+  padding: 2.5rem;
+  border-radius: 10px;
+  color: var(--anthrazit);
+  max-width: 600px;
+  margin: 3rem auto;
+}
+
+.buchungsformular h3 {
+  color: var(--petrol);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--anthrazit);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--hellgrau);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--petrol);
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.form-group.checkbox input {
+  width: auto;
+}
+
+.form-group.checkbox label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+
+.btn-submit {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--petrol);
+  color: var(--weiss);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-submit:hover {
+  background: var(--dunkelblau);
+}
+
+.social-media {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-media h3 {
+  margin-bottom: 1.5rem;
+  font-size: 1.3rem;
+  color: var(--weiss);
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  background: var(--weiss);
+  color: var(--anthrazit);
+  border-radius: 50%;
+  text-decoration: none;
+  transition: all 0.3s;
+  margin: 0 0.5rem;
+}
+
+.social-icon:hover {
+  background: var(--gelb);
+  color: var(--weiss);
+  transform: scale(1.15);
+}
+
+/* Footer */
+footer {
+  background: var(--dunkelblau);
+  color: var(--weiss);
+  text-align: center;
+  padding: 2rem;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+  #ueber-uns .ueber-uns-flex,
+  .kurs-detail-flex {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .ueber-uns-image,
+  .ueber-uns-text,
+  .kurs-detail-image,
+  .kurs-detail-text {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .ueber-uns-text p,
+  .kurs-detail-text p {
+    text-align: center;
+  }
+
+  nav .dropdown-content {
+    position: relative;
+    display: none;
+    box-shadow: none;
+    margin-top: 0;
+  }
+
+  nav .dropdown:hover .dropdown-content {
+    display: block;
+  }
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  #hero .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-text p {
+    font-size: 1.1rem;
+  }
+
+  .hero-button .btn-light {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.2rem;
+  }
+
+  section h2 {
+    font-size: 2rem;
+  }
+
+  .ueber-uns-text p {
+    font-size: 1rem;
+  }
+
+  .kurs-detail-text p,
+  .kurs-detail-text ul li {
+    font-size: 1rem;
+  }
+
+  .kurs-detail h2 {
+    font-size: 2rem;
+  }
+
+  .kurs-detail-text h3 {
+    font-size: 1.5rem;
+  }
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .buchungsformular {
+    padding: 1.5rem;
+  }
+}
