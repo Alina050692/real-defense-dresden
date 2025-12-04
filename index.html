@@ -287,7 +287,10 @@
 
           <div class="buchungsformular">
             <h3>Kurs buchen</h3>
-            <form action="#" method="POST">
+            <form name="buchung" method="POST" data-netlify="true">
+              <!-- Dieses versteckte Feld ist wichtig -->
+              <input type="hidden" name="form-name" value="buchung" />
+
               <div class="form-row">
                 <div class="form-group">
                   <label for="vorname">Vorname *</label>
@@ -342,10 +345,10 @@
                   name="datenschutz"
                   required
                 />
-                <label for="datenschutz"
-                  >Ich habe die Datenschutzerklärung gelesen und akzeptiere
-                  diese. *</label
-                >
+                <label for="datenschutz">
+                  Ich habe die Datenschutzerklärung gelesen und akzeptiere
+                  diese. *
+                </label>
               </div>
 
               <button type="submit" class="btn-submit">
