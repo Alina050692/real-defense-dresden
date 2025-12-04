@@ -608,6 +608,8 @@ a:visited {
 
   .hero-text {
     text-align: center;
+    /* Text mittig */
+    padding: 20px;
   }
 
   .hero-text h1 {
