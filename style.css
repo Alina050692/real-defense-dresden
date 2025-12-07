@@ -3,7 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 }
-
 :root {
   --petrol: #005761;
   --dunkelblau: #212d32;
@@ -12,53 +11,45 @@
   --weiss: #ffffff;
   --gelb: #b78d26;
 }
-
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   color: var(--anthrazit);
-}
-
-/* ========== Navigation ========== */
+} /* Navigation */
 nav {
   background: var(--dunkelblau);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  padding: 1rem 2rem;
+  padding: 1rem 0;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
-
 nav .container {
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-
 nav img {
   width: 200px;
   max-width: 100%;
   height: auto;
 }
-
 nav ul {
   list-style: none;
   display: flex;
   gap: 2rem;
   align-items: center;
 }
-
 nav li {
   position: relative;
 }
-
 nav .dropdown {
   position: relative;
 }
-
 nav .dropdown-content {
   display: none;
   position: absolute;
@@ -71,11 +62,9 @@ nav .dropdown-content {
   margin-top: 0.5rem;
   z-index: 1001;
 }
-
 nav .dropdown:hover .dropdown-content {
   display: block;
 }
-
 nav .dropdown-content a {
   display: block;
   padding: 0.8rem 1.5rem;
@@ -83,42 +72,21 @@ nav .dropdown-content a {
   text-decoration: none;
   transition: background 0.3s;
 }
-
 nav .dropdown-content a:hover {
   background: var(--anthrazit);
 }
-
 nav .dropdown > a::after {
   content: " ▼";
   font-size: 0.7rem;
 }
-
 nav a {
   color: var(--weiss);
   text-decoration: none;
   transition: color 0.3s;
 }
-
 nav a:hover {
   color: var(--gelb);
-}
-
-/* Hamburger */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-}
-
-.hamburger span {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  border-radius: 2px;
-}
-
-/* ========== Hero Section ========== */
+} /* Hero Section mit Video */
 #hero {
   position: relative;
   color: var(--weiss);
@@ -131,7 +99,6 @@ nav a:hover {
   align-items: center;
   justify-content: center;
 }
-
 #hero-video {
   position: absolute;
   top: 50%;
@@ -144,7 +111,6 @@ nav a:hover {
   z-index: 1;
   object-fit: cover;
 }
-
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -158,7 +124,6 @@ nav a:hover {
   );
   z-index: 2;
 }
-
 #hero .container {
   position: relative;
   z-index: 3;
@@ -166,14 +131,11 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
-  flex-wrap: wrap;
 }
-
 .hero-text {
   flex: 1;
   text-align: left;
 }
-
 #hero h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 4rem;
@@ -183,13 +145,11 @@ nav a:hover {
   font-weight: bold;
   letter-spacing: 2px;
 }
-
 #hero p {
   font-size: 1.4rem;
   margin-bottom: 0;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
 }
-
 .btn {
   flex-shrink: 0;
   display: inline-block;
@@ -202,43 +162,33 @@ nav a:hover {
   font-size: large;
   font-weight: bold;
 }
-
 .btn:hover {
   background: var(--dunkelblau);
 }
-
 .btn-light {
   background: var(--dunkelblau);
   color: var(--weiss);
 }
-
 .btn-light:hover {
   background: var(--gelb);
-}
-
-/* ========== Container & Sections ========== */
+} /* Container */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
-}
-
+} /* Sections */
 section {
   padding: 80px 2rem;
 }
-
 section h2 {
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 3rem;
   color: var(--dunkelblau);
-}
-
-/* ========== Über uns ========== */
+} /* Über uns */
 #ueber-uns {
   background: var(--weiss);
 }
-
 #ueber-uns .ueber-uns-flex {
   display: flex;
   align-items: center;
@@ -246,61 +196,37 @@ section h2 {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .ueber-uns-image {
   flex: 1;
   min-width: 300px;
 }
-
 .ueber-uns-image img {
   width: 100%;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 #ueber-uns .content {
   max-width: 800px;
   margin: 0 auto;
   text-align: justify;
   font-size: 1.1rem;
+} /* Kurs-Details Sektionen */
+.kurs-detail {
+  padding: 80px 2rem;
 }
-
-/* ========== Kurse ========== */
-.kurs-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.kurs-card {
+.kurs-detail:nth-child(odd) {
   background: var(--weiss);
-  padding: 2rem;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
 }
-
-.kurs-card:hover {
-  transform: translateY(-5px);
+.kurs-detail:nth-child(even) {
+  background: var(--hellgrau);
 }
-
-.kurs-card h3 {
-  color: var(--petrol);
-  margin-bottom: 1rem;
-  font-size: 1.5rem;
+.kurs-detail h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  color: var(--dunkelblau);
 }
-
-.kurs-card ul li:before {
-  content: "✓ ";
-  color: var(--petrol);
-  font-weight: bold;
-  margin-right: 0.5rem;
-}
-
-/* ========== Kurs Details ========== */
 .kurs-detail-flex {
   display: flex;
   align-items: center;
@@ -309,20 +235,100 @@ section h2 {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .kurs-detail-image {
   flex: 0 0 45%;
   max-width: 500px;
 }
-
+.kurs-detail-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  display: block;
+}
 .kurs-detail-text {
   flex: 0 0 45%;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
-
-/* ========== Vorteile ========== */
+.kurs-detail-text h3 {
+  color: var(--petrol);
+  font-size: 1.8rem;
+  margin-bottom: 0.5rem;
+}
+.kurs-detail-text p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin: 0;
+  text-align: justify;
+}
+.kurs-detail-text ul {
+  list-style: none;
+  padding: 0;
+}
+.kurs-detail-text ul li {
+  padding: 0.5rem 0;
+  font-size: 1.05rem;
+}
+.kurs-detail-text ul li:before {
+  content: "✓ ";
+  color: var(--petrol);
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+.kurs-info-box {
+  background: var(--petrol);
+  color: var(--weiss);
+  padding: 1.5rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+.kurs-info-box p {
+  text-align: left;
+  margin: 0.5rem 0;
+}
+.kurs-info-box strong {
+  display: inline-block;
+  min-width: 100px;
+} /* Kurse */
+#kurse {
+  background: var(--hellgrau);
+}
+.kurs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.kurs-card {
+  background: var(--weiss);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
+}
+.kurs-card:hover {
+  transform: translateY(-5px);
+}
+.kurs-card h3 {
+  color: var(--petrol);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+.kurs-card ul {
+  list-style: none;
+  margin: 1rem 0;
+}
+.kurs-card ul li:before {
+  content: "✓ ";
+  color: var(--petrol);
+  font-weight: bold;
+} /* Vorteile */
+#vorteile {
+  background: var(--hellgrau);
+}
 .vorteile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -330,12 +336,10 @@ section h2 {
   max-width: 1200px;
   margin: 0 auto;
 }
-
 .vorteil-item {
   text-align: center;
   padding: 1.5rem;
 }
-
 .vorteil-icon {
   width: 80px;
   height: 80px;
@@ -348,14 +352,38 @@ section h2 {
   font-size: 2rem;
   margin: 0 auto 1rem;
 }
-
-/* ========== Kontakt & Formular ========== */
+.vorteil-item h3 {
+  color: var(--dunkelblau);
+  margin-bottom: 0.5rem;
+} /* Kontakt */
+#kontakt {
+  background: var(--anthrazit);
+  color: var(--weiss);
+}
+#kontakt h2 {
+  color: var(--weiss);
+}
 .kontakt-wrapper {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
-
+.kontakt-content {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.kontakt-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--weiss);
+}
+.kontakt-info {
+  margin: 2rem 0;
+  font-size: 1.1rem;
+}
+.kontakt-info p {
+  margin: 1rem 0;
+} /* Buchungsformular */
 .buchungsformular {
   background: var(--weiss);
   padding: 2.5rem;
@@ -364,118 +392,155 @@ section h2 {
   max-width: 600px;
   margin: 3rem auto;
 }
-
+.buchungsformular h3 {
+  color: var(--petrol);
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+.form-group {
+  margin-bottom: 1.5rem;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+  color: var(--anthrazit);
+}
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 2px solid var(--hellgrau);
+  border-radius: 5px;
+  font-size: 1rem;
+  font-family: inherit;
+  transition: border-color 0.3s;
+}
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--petrol);
+}
+.form-group textarea {
+  resize: vertical;
+  min-height: 100px;
+}
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
-
-/* ========== Footer ========== */
+.form-group.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.form-group.checkbox input {
+  width: auto;
+}
+.form-group.checkbox label {
+  margin-bottom: 0;
+  font-weight: normal;
+}
+.btn-submit {
+  width: 100%;
+  padding: 1rem 2rem;
+  background: var(--petrol);
+  color: var(--weiss);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+.btn-submit:hover {
+  background: var(--dunkelblau);
+} /* Footer */
 footer {
   background: var(--dunkelblau);
   color: var(--weiss);
   text-align: center;
   padding: 2rem;
 }
-
-/* ========== Responsive ========== */
+a {
+  color: white;
+  text-decoration: none;
+}
+a:visited {
+  color: white;
+} /* Responsive */
 @media (max-width: 992px) {
   #ueber-uns .ueber-uns-flex,
   .kurs-detail-flex {
     flex-direction: column;
     gap: 2rem;
   }
-
   .ueber-uns-image,
+  .ueber-uns-text,
   .kurs-detail-image,
   .kurs-detail-text {
     flex: 0 0 100%;
     max-width: 100%;
   }
-
   .ueber-uns-text p,
   .kurs-detail-text p {
     text-align: center;
   }
-
   nav .dropdown-content {
     position: relative;
     display: none;
     box-shadow: none;
     margin-top: 0;
   }
-
   nav .dropdown:hover .dropdown-content {
     display: block;
   }
 }
-
 @media (max-width: 768px) {
-  /* Hamburger anzeigen */
-  .hamburger {
-    display: flex;
-  }
-
   nav ul {
     flex-direction: column;
-    width: 100%;
-    display: none; /* wird per JS sichtbar */
-    text-align: center;
-    padding: 0;
-    margin: 0;
+    gap: 1rem;
   }
-
-  nav ul.active {
-    display: flex;
-  }
-
-  nav ul li {
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-
-  nav .dropdown-content {
-    position: static;
-    box-shadow: none;
-    margin: 0;
-  }
-
-  /* Hero Section */
   #hero .container {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
-
+  .hero-text {
+    text-align: center; /* Text mittig */
+    padding: 20px;
+  }
   .hero-text h1 {
     font-size: 2.5rem;
   }
-
   .hero-text p {
     font-size: 1.1rem;
   }
-
-  /* Kurs-Details */
-  .kurs-detail-flex {
-    flex-direction: column;
-    gap: 2rem;
+  .hero-button .btn-light {
+    padding: 1.5rem 2.5rem;
+    font-size: 1.2rem;
   }
-
-  .kurs-detail-text h3 {
-    font-size: 1.5rem;
+  section h2 {
+    font-size: 2rem;
   }
-
+  .ueber-uns-text p {
+    font-size: 1rem;
+  }
   .kurs-detail-text p,
   .kurs-detail-text ul li {
     font-size: 1rem;
   }
-
-  /* Formulare */
+  .kurs-detail h2 {
+    font-size: 2rem;
+  }
+  .kurs-detail-text h3 {
+    font-size: 1.5rem;
+  }
   .form-row {
     grid-template-columns: 1fr;
   }
-
   .buchungsformular {
     padding: 1.5rem;
   }
