@@ -19,21 +19,20 @@ body {
   color: var(--anthrazit);
 }
 
-/* Navigation */
+/* ========== Navigation ========== */
 nav {
   background: var(--dunkelblau);
   position: fixed;
   width: 100%;
   top: 0;
   z-index: 1000;
-  padding: 1rem 0;
+  padding: 1rem 2rem;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
 nav .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -55,6 +54,7 @@ nav ul {
 nav li {
   position: relative;
 }
+
 nav .dropdown {
   position: relative;
 }
@@ -89,7 +89,7 @@ nav .dropdown-content a:hover {
 }
 
 nav .dropdown > a::after {
-  content: "  ▼";
+  content: " ▼";
   font-size: 0.7rem;
 }
 
@@ -103,7 +103,22 @@ nav a:hover {
   color: var(--gelb);
 }
 
-/* Hero Section mit Video */
+/* Hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 5px;
+}
+
+.hamburger span {
+  width: 25px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* ========== Hero Section ========== */
 #hero {
   position: relative;
   color: var(--weiss);
@@ -129,6 +144,7 @@ nav a:hover {
   z-index: 1;
   object-fit: cover;
 }
+
 .hero-overlay {
   position: absolute;
   top: 0;
@@ -150,11 +166,14 @@ nav a:hover {
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
+  flex-wrap: wrap;
 }
+
 .hero-text {
   flex: 1;
   text-align: left;
 }
+
 #hero h1 {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 4rem;
@@ -197,14 +216,13 @@ nav a:hover {
   background: var(--gelb);
 }
 
-/* Container */
+/* ========== Container & Sections ========== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 2rem;
 }
 
-/* Sections */
 section {
   padding: 80px 2rem;
 }
@@ -216,10 +234,11 @@ section h2 {
   color: var(--dunkelblau);
 }
 
-/* Über uns */
+/* ========== Über uns ========== */
 #ueber-uns {
   background: var(--weiss);
 }
+
 #ueber-uns .ueber-uns-flex {
   display: flex;
   align-items: center;
@@ -239,6 +258,7 @@ section h2 {
   border-radius: 20px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
+
 #ueber-uns .content {
   max-width: 800px;
   margin: 0 auto;
@@ -246,108 +266,7 @@ section h2 {
   font-size: 1.1rem;
 }
 
-/* Kurs-Details Sektionen */
-.kurs-detail {
-  padding: 80px 2rem;
-}
-
-.kurs-detail:nth-child(odd) {
-  background: var(--weiss);
-}
-
-.kurs-detail:nth-child(even) {
-  background: var(--hellgrau);
-}
-
-.kurs-detail h2 {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: var(--dunkelblau);
-}
-
-.kurs-detail-flex {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 3rem;
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.kurs-detail-image {
-  flex: 0 0 45%;
-  max-width: 500px;
-}
-
-.kurs-detail-image img {
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  display: block;
-}
-
-.kurs-detail-text {
-  flex: 0 0 45%;
-  display: flex;
-  flex-direction: column;
-  gap: 1.5rem;
-}
-
-.kurs-detail-text h3 {
-  color: var(--petrol);
-  font-size: 1.8rem;
-  margin-bottom: 0.5rem;
-}
-
-.kurs-detail-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  margin: 0;
-  text-align: justify;
-}
-
-.kurs-detail-text ul {
-  list-style: none;
-  padding: 0;
-}
-
-.kurs-detail-text ul li {
-  padding: 0.5rem 0;
-  font-size: 1.05rem;
-}
-
-.kurs-detail-text ul li:before {
-  content: "✓ ";
-  color: var(--petrol);
-  font-weight: bold;
-  margin-right: 0.5rem;
-}
-
-.kurs-info-box {
-  background: var(--petrol);
-  color: var(--weiss);
-  padding: 1.5rem;
-  border-radius: 8px;
-  margin-top: 1rem;
-}
-
-.kurs-info-box p {
-  text-align: left;
-  margin: 0.5rem 0;
-}
-
-.kurs-info-box strong {
-  display: inline-block;
-  min-width: 100px;
-}
-
-/* Kurse */
-#kurse {
-  background: var(--hellgrau);
-}
-
+/* ========== Kurse ========== */
 .kurs-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -374,22 +293,36 @@ section h2 {
   font-size: 1.5rem;
 }
 
-.kurs-card ul {
-  list-style: none;
-  margin: 1rem 0;
-}
-
 .kurs-card ul li:before {
   content: "✓ ";
   color: var(--petrol);
   font-weight: bold;
+  margin-right: 0.5rem;
 }
 
-/* Vorteile */
-#vorteile {
-  background: var(--hellgrau);
+/* ========== Kurs Details ========== */
+.kurs-detail-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
+.kurs-detail-image {
+  flex: 0 0 45%;
+  max-width: 500px;
+}
+
+.kurs-detail-text {
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ========== Vorteile ========== */
 .vorteile-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
@@ -416,48 +349,13 @@ section h2 {
   margin: 0 auto 1rem;
 }
 
-.vorteil-item h3 {
-  color: var(--dunkelblau);
-  margin-bottom: 0.5rem;
-}
-
-/* Kontakt */
-#kontakt {
-  background: var(--anthrazit);
-  color: var(--weiss);
-}
-
-#kontakt h2 {
-  color: var(--weiss);
-}
-
+/* ========== Kontakt & Formular ========== */
 .kontakt-wrapper {
   max-width: 800px;
   margin: 0 auto;
   text-align: center;
 }
 
-.kontakt-content {
-  text-align: center;
-  margin-bottom: 3rem;
-}
-
-.kontakt-content h3 {
-  font-size: 1.8rem;
-  margin-bottom: 1.5rem;
-  color: var(--weiss);
-}
-
-.kontakt-info {
-  margin: 2rem 0;
-  font-size: 1.1rem;
-}
-
-.kontakt-info p {
-  margin: 1rem 0;
-}
-
-/* Buchungsformular */
 .buchungsformular {
   background: var(--weiss);
   padding: 2.5rem;
@@ -467,102 +365,21 @@ section h2 {
   margin: 3rem auto;
 }
 
-.buchungsformular h3 {
-  color: var(--petrol);
-  margin-bottom: 1.5rem;
-  font-size: 1.8rem;
-}
-
-.form-group {
-  margin-bottom: 1.5rem;
-}
-
-.form-group label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-weight: bold;
-  color: var(--anthrazit);
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-  width: 100%;
-  padding: 0.8rem;
-  border: 2px solid var(--hellgrau);
-  border-radius: 5px;
-  font-size: 1rem;
-  font-family: inherit;
-  transition: border-color 0.3s;
-}
-
-.form-group input:focus,
-.form-group select:focus,
-.form-group textarea:focus {
-  outline: none;
-  border-color: var(--petrol);
-}
-
-.form-group textarea {
-  resize: vertical;
-  min-height: 100px;
-}
-
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 1rem;
 }
 
-.form-group.checkbox {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.form-group.checkbox input {
-  width: auto;
-}
-
-.form-group.checkbox label {
-  margin-bottom: 0;
-  font-weight: normal;
-}
-
-.btn-submit {
-  width: 100%;
-  padding: 1rem 2rem;
-  background: var(--petrol);
-  color: var(--weiss);
-  border: none;
-  border-radius: 5px;
-  font-size: 1.1rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background 0.3s;
-}
-
-.btn-submit:hover {
-  background: var(--dunkelblau);
-}
-
-/* Footer */
+/* ========== Footer ========== */
 footer {
   background: var(--dunkelblau);
   color: var(--weiss);
   text-align: center;
   padding: 2rem;
 }
-a {
-  color: white;
-  text-decoration: none;
-}
 
-a:visited {
-  color: white;
-}
-
-/* Responsive */
+/* ========== Responsive ========== */
 @media (max-width: 992px) {
   #ueber-uns .ueber-uns-flex,
   .kurs-detail-flex {
@@ -571,7 +388,6 @@ a:visited {
   }
 
   .ueber-uns-image,
-  .ueber-uns-text,
   .kurs-detail-image,
   .kurs-detail-text {
     flex: 0 0 100%;
@@ -596,20 +412,40 @@ a:visited {
 }
 
 @media (max-width: 768px) {
+  /* Hamburger anzeigen */
+  .hamburger {
+    display: flex;
+  }
+
   nav ul {
     flex-direction: column;
-    gap: 1rem;
+    width: 100%;
+    display: none; /* wird per JS sichtbar */
+    text-align: center;
+    padding: 0;
+    margin: 0;
   }
 
+  nav ul.active {
+    display: flex;
+  }
+
+  nav ul li {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  nav .dropdown-content {
+    position: static;
+    box-shadow: none;
+    margin: 0;
+  }
+
+  /* Hero Section */
   #hero .container {
     flex-direction: column;
+    align-items: center;
     text-align: center;
-  }
-
-  .hero-text {
-    text-align: center;
-    /* Text mittig */
-    padding: 20px;
   }
 
   .hero-text h1 {
@@ -620,17 +456,14 @@ a:visited {
     font-size: 1.1rem;
   }
 
-  .hero-button .btn-light {
-    padding: 1.5rem 2.5rem;
-    font-size: 1.2rem;
+  /* Kurs-Details */
+  .kurs-detail-flex {
+    flex-direction: column;
+    gap: 2rem;
   }
 
-  section h2 {
-    font-size: 2rem;
-  }
-
-  .ueber-uns-text p {
-    font-size: 1rem;
+  .kurs-detail-text h3 {
+    font-size: 1.5rem;
   }
 
   .kurs-detail-text p,
@@ -638,13 +471,7 @@ a:visited {
     font-size: 1rem;
   }
 
-  .kurs-detail h2 {
-    font-size: 2rem;
-  }
-
-  .kurs-detail-text h3 {
-    font-size: 1.5rem;
-  }
+  /* Formulare */
   .form-row {
     grid-template-columns: 1fr;
   }

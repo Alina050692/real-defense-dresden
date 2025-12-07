@@ -17,6 +17,12 @@
             alt="Real Defense Logo"
           />
         </div>
+        <!-- Hamburger Menü für Mobile -->
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
         <ul>
           <li><a href="#hero">START</a></li>
           <li><a href="#ueber-uns">DEIN TRAINER</a></li>
@@ -373,5 +379,14 @@
         </p>
       </div>
     </footer>
+    <!-- Hamburger JS -->
+    <script>
+      const hamburger = document.querySelector(".hamburger");
+      const navMenu = document.querySelector("nav ul");
+
+      hamburger.addEventListener("click", () => {
+        navMenu.classList.toggle("active");
+      });
+    </script>
   </body>
 </html>
