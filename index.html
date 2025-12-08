@@ -11,26 +11,32 @@
     <nav>
       <div class="container">
         <div class="logo">
-          />
           <img
             src="images/Real Defense final Logo.png"
             alt="Real Defense Logo"
           />
         </div>
-        <ul>
-          <li><a href="#hero">START</a></li>
-          <li><a href="#ueber-uns">DEIN TRAINER</a></li>
-          <li class="dropdown">
+        <div class="hamburger" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <ul id="navMenu">
+          <li><a href="#hero" onclick="closeMenu()">START</a></li>
+          <li><a href="#ueber-uns" onclick="closeMenu()">DEIN TRAINER</a></li>
+          <li class="dropdown" onclick="toggleDropdown(event)">
             <a href="#kurse">KURSE</a>
             <div class="dropdown-content">
-              <a href="#anfaenger">Real Defense I</a>
-              <a href="#fortgeschrittene">Real Defense II</a>
-              <a href="#frauen">Real Defense BOOST</a>
+              <a href="#anfaenger" onclick="closeMenu()">REAL DEFENSE I</a>
+              <a href="#fortgeschrittene" onclick="closeMenu()"
+                >REAL DEFENSE II</a
+              >
+              <a href="#frauen" onclick="closeMenu()">REAL DEFENSE BOOST</a>
             </div>
           </li>
-          <li><a href="#vorteile">VORTEILE</a></li>
-          <li><a href="#kontakt">KONTAKT</a></li>
-          <li><a href="impressum.html">IMPRESSUM</a></li>
+          <li><a href="#vorteile" onclick="closeMenu()">VORTEILE</a></li>
+          <li><a href="#kontakt" onclick="closeMenu()">KONTAKT</a></li>
+          <li><a href="impressum.html" onclick="closeMenu()">IMPRESSUM</a></li>
         </ul>
       </div>
     </nav>
