@@ -373,5 +373,42 @@
         </p>
       </div>
     </footer>
+    <script>
+      function toggleMenu() {
+        const navMenu = document.getElementById("navMenu");
+        const hamburger = document.querySelector(".hamburger");
+        navMenu.classList.toggle("active");
+        hamburger.classList.toggle("active");
+      }
+
+      function closeMenu() {
+        const navMenu = document.getElementById("navMenu");
+        const hamburger = document.querySelector(".hamburger");
+        navMenu.classList.remove("active");
+        hamburger.classList.remove("active");
+      }
+
+      function toggleDropdown(event) {
+        if (window.innerWidth <= 768) {
+          event.preventDefault();
+          const dropdown = event.currentTarget;
+          dropdown.classList.toggle("active");
+        }
+      }
+
+      // Schließe Menü wenn außerhalb geklickt wird
+      document.addEventListener("click", function (event) {
+        const nav = document.querySelector("nav");
+        const navMenu = document.getElementById("navMenu");
+        const hamburger = document.querySelector(".hamburger");
+
+        if (
+          !nav.contains(event.target) &&
+          navMenu.classList.contains("active")
+        ) {
+          closeMenu();
+        }
+      });
+    </script>
   </body>
 </html>
