@@ -193,7 +193,7 @@ nav a:hover {
   background: var(--gelb);
 }
 .btn-light {
-  background: var(--gelb);
+  background: var(--dunkelblau);
   color: var(--weiss);
   text-align: center;
 }
@@ -491,7 +491,7 @@ section h2 {
   text-align: center;
 }
 .btn-submit:hover {
-  background: var(--dunkelblau);
+  background: var(--gelb);
 } /* Footer */
 footer {
   background: var(--dunkelblau);
