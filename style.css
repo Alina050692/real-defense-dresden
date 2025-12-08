@@ -195,6 +195,7 @@ nav a:hover {
 .btn-light {
   background: var(--dunkelblau);
   color: var(--weiss);
+  text-align: center;
 }
 .btn-light:hover {
   background: var(--gelb);
@@ -487,6 +488,7 @@ section h2 {
   font-weight: bold;
   cursor: pointer;
   transition: background 0.3s;
+  text-align: center;
 }
 .btn-submit:hover {
   background: var(--dunkelblau);
