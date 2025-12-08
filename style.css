@@ -104,10 +104,6 @@ nav .dropdown-content a {
 nav .dropdown-content a:hover {
   background: var(--anthrazit);
 }
-nav .dropdown > a::after {
-  content: " ▼";
-  font-size: 0.7rem;
-}
 nav a {
   color: var(--weiss);
   text-decoration: none;
