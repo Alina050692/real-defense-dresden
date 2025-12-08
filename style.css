@@ -190,10 +190,10 @@ nav a:hover {
   text-align: center;
 }
 .btn:hover {
-  background: var(--dunkelblau);
+  background: var(--gelb);
 }
 .btn-light {
-  background: var(--dunkelblau);
+  background: var(--gelb);
   color: var(--weiss);
   text-align: center;
 }
