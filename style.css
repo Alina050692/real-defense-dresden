@@ -221,6 +221,7 @@ section h2 {
 #ueber-uns .ueber-uns-flex {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 4rem;
   max-width: 1200px;
   margin: 0 auto;
@@ -238,9 +239,10 @@ section h2 {
 #ueber-uns .content {
   max-width: 800px;
   margin: 0 auto;
-  text-align: justify;
+  text-align: left;
   font-size: 1.1rem;
-} /* Kurs-Details Sektionen */
+}
+/* Kurs-Details Sektionen */
 .kurs-detail {
   padding: 80px 2rem;
 }
