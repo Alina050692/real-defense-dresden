@@ -4,12 +4,12 @@
   box-sizing: border-box;
 }
 :root {
-  --petrol: #005761;
+  --petrol: #1c393f;
   --dunkelblau: #212d32;
   --anthrazit: #3a3a3c;
-  --hellgrau: #e5e5e5;
+  --hellgrau: #f7e5c1;
   --weiss: #ffffff;
-  --gelb: #b78d26;
+  --gelb: #b7a85c;
 }
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
