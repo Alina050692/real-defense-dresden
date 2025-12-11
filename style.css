@@ -23,7 +23,7 @@ h1 {
 h2 {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 2px;
-  font-size: 32px;
+  font-size: 48px;
 }
 h3 {
   font-family: "Bebas Neue", sans-serif;
@@ -176,7 +176,7 @@ nav a:hover {
   text-align: left;
 }
 #hero h1 {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Bebas Neue", sans-serif;
   font-size: 4rem;
   line-height: 1.1;
   margin-bottom: 1rem;
@@ -302,6 +302,7 @@ section h2 {
   color: var(--petrol);
   font-size: 1.8rem;
   margin-bottom: 0.5rem;
+  text-align: center;
 }
 .kurs-detail-text p {
   font-size: 1.1rem;
@@ -329,6 +330,7 @@ section h2 {
   padding: 1.5rem;
   border-radius: 8px;
   margin-top: 1rem;
+  text-align: left;
 }
 .kurs-info-box p {
   text-align: left;
@@ -337,7 +339,8 @@ section h2 {
 .kurs-info-box strong {
   display: inline-block;
   min-width: 100px;
-} /* Kurse */
+}
+/* Kurse */
 #kurse {
   background: var(--hellgrau);
 }
@@ -371,7 +374,9 @@ section h2 {
   content: "✓ ";
   color: var(--petrol);
   font-weight: bold;
-} /* Vorteile */
+}
+
+/* Vorteile */
 #vorteile {
   background: var(--hellgrau);
 }
