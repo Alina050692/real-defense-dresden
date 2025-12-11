@@ -287,11 +287,12 @@ section h2 {
 }
 
 .kurs-detail-image img {
-  width: 100%;
+  width: 60%;
   height: auto;
   border-radius: 10px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   display: block;
+  margin: 0 auto;
 }
 .kurs-detail-text {
   flex: 0 0 45%;
