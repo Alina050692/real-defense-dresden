@@ -19,11 +19,12 @@ body {
 h1 {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 2px;
+  font-size: 120px;
 }
 h2 {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 3px;
-  font-size: 500px;
+  font-size: 120px;
 }
 h3 {
   font-family: "Bebas Neue", sans-serif;
