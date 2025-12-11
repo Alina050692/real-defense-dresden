@@ -333,13 +333,11 @@ section h2 {
   text-align: left;
 }
 .kurs-info-box p {
-  display: flex;
-  justify-content: flex-start;
+  display: left;
   margin: 0.5rem 0;
 }
 .kurs-info-box strong {
-  display: flex;
-  justify-content: flex-start;
+  display: left;
   min-width: 100px;
 }
 /* Kurse */
