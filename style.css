@@ -282,9 +282,10 @@ section h2 {
   margin: 0 auto;
 }
 .kurs-detail-image {
-  flex: 0 0 45%;
-  max-width: 500px;
+  flex: 1;
+  min-width: 300px;
 }
+
 .kurs-detail-image img {
   width: 100%;
   height: auto;
