@@ -16,8 +16,15 @@ body {
   line-height: 1.6;
   color: var(--anthrazit);
 }
-h1,
-h2,
+h1 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+}
+h2 {
+  font-family: "Bebas Neue", sans-serif;
+  letter-spacing: 2px;
+  font-size: 32px;
+}
 h3 {
   font-family: "Bebas Neue", sans-serif;
   letter-spacing: 2px;
