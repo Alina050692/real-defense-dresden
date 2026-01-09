@@ -481,6 +481,48 @@ section h2 {
   resize: vertical;
   min-height: 100px;
 }
+/* Neue Styles für Monatsauswahl */
+.month-selection {
+  margin-bottom: 20px;
+}
+
+.month-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.month-option {
+  position: relative;
+}
+
+.month-option input[type="radio"] {
+  position: absolute;
+  opacity: 0;
+}
+
+.month-label {
+  display: block;
+  padding: 12px 8px;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.month-option input:checked + .month-label {
+  background: #667eea;
+  color: white;
+  border-color: #667eea;
+}
+
+.month-label:hover {
+  border-color: #667eea;
+}
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -645,4 +687,9 @@ section h2 {
 }
 .buchungsformular {
   padding: 1.5rem;
+}
+@media (max-width: 768px) {
+  .month-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }

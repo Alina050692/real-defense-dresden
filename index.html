@@ -316,9 +316,22 @@
                 </select>
               </div>
 
+              <div class="form-group month-selection">
+                <label>Wunschmonat für den Kurs *</label>
+                <div class="month-grid" id="monthGrid"></div>
+              </div>
+
               <div class="form-group">
-                <label for="startdatum">Gewünschter Starttermin</label>
-                <input type="date" id="startdatum" name="startdatum" />
+                <label for="teilnehmer">Anzahl Teilnehmer *</label>
+                <input
+                  type="number"
+                  id="teilnehmer"
+                  name="teilnehmer"
+                  min="1"
+                  max="20"
+                  value="1"
+                  required
+                />
               </div>
 
               <div class="form-group">
