@@ -412,7 +412,7 @@ section h2 {
   margin-bottom: 0.5rem;
 } /* Kontakt */
 #kontakt {
-  background: var(--anthrazit);
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   color: var(--weiss);
 }
 #kontakt h2 {
@@ -443,7 +443,6 @@ section h2 {
   background: var(--weiss);
   padding: 2.5rem;
   border-radius: 10px;
-  color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
   max-width: 600px;
   margin: 3rem auto;
 }
@@ -459,7 +458,7 @@ section h2 {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: var(--anthrazit);
 }
 .form-group input,
 .form-group select,
