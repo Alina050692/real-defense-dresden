@@ -412,7 +412,7 @@ section h2 {
   margin-bottom: 0.5rem;
 } /* Kontakt */
 #kontakt {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: linear-gradient(135deg, #1c393f 0%, #4e75d8 100%);
   color: var(--weiss);
 }
 #kontakt h2 {
