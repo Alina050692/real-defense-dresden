@@ -10,7 +10,7 @@
   --hellgrau: #c0dde6d3;
   --weiss: #ffffff;
   --gelb: #a79228;
-  --gradient: linear-gradient(135deg, #1c393f 0%, #84dadd 100%);
+  --gradient: linear-gradient(135deg, #22606d 0%, #8edce9 100%);
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -267,7 +267,7 @@ section h2 {
   background: var(--weiss);
 }
 .kurs-detail:nth-child(even) {
-  background: var(--gradient);
+  background: var(--hellgrau);
 }
 .kurs-detail h2 {
   text-align: center;
