@@ -482,10 +482,6 @@ section h2 {
   min-height: 100px;
 }
 /* Neue Styles für Monatsauswahl */
-.month-selection {
-  margin-bottom: 20px;
-}
-
 .month-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -500,28 +496,32 @@ section h2 {
 .month-option input[type="radio"] {
   position: absolute;
   opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
 }
 
 .month-label {
   display: block;
   padding: 12px 8px;
-  border: 2px solid #e0e0e0;
+  border: 2px solid #c0dde6d3;
   border-radius: 6px;
   text-align: center;
   cursor: pointer;
   transition: all 0.3s;
   font-size: 13px;
   font-weight: 600;
+  color: #3a3a3c;
 }
 
 .month-option input:checked + .month-label {
-  background: #667eea;
+  background: #1c393f;
   color: white;
-  border-color: #667eea;
+  border-color: #1c393f;
 }
 
 .month-label:hover {
-  border-color: #667eea;
+  border-color: #1c393f;
 }
 .form-row {
   display: grid;
