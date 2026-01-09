@@ -10,7 +10,6 @@
   --hellgrau: #c0dde6d3;
   --weiss: #ffffff;
   --gelb: #a79228;
-  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -267,7 +266,7 @@ section h2 {
   background: var(--weiss);
 }
 .kurs-detail:nth-child(even) {
-  background: var(--hellgrau);
+  background: linear-gradient(135deg, #1c393f 0%, #167f82 100%);
 }
 .kurs-detail h2 {
   text-align: center;
@@ -346,7 +345,7 @@ section h2 {
 }
 /* Kurse */
 #kurse {
-  background: var(--hellgrau);
+  background: linear-gradient(135deg, #1c393f 0%, #167f82 100%);
 }
 .kurs-grid {
   display: grid;
@@ -382,7 +381,7 @@ section h2 {
 
 /* Vorteile */
 #vorteile {
-  background: var(--hellgrau);
+  background: linear-gradient(135deg, #1c393f 0%, #167f82 100%);
 }
 .vorteile-grid {
   display: grid;
@@ -412,7 +411,7 @@ section h2 {
   margin-bottom: 0.5rem;
 } /* Kontakt */
 #kontakt {
-  background: linear-gradient(135deg, #1c393f 0%, #4e75d8 100%);
+  background: var(--anthrazit);
   color: var(--weiss);
 }
 #kontakt h2 {
