@@ -318,6 +318,12 @@
 
               <div class="form-group">
                 <label>Gewünschter Monat *</label>
+                <input
+                  type="hidden"
+                  name="wunschmonat"
+                  id="wunschmonat"
+                  required
+                />
                 <div class="month-grid" id="monthGrid"></div>
               </div>
 
@@ -328,7 +334,7 @@
                   id="teilnehmer"
                   name="teilnehmer"
                   min="1"
-                  max="20"
+                  max="10"
                   value="1"
                   required
                 />
@@ -358,11 +364,6 @@
 
               <button type="submit" class="btn-submit">JETZT ANMELDEN</button>
             </form>
-            <div class="success-message" id="successMessage">
-              <strong>Vielen Dank für dein Interesse!</strong><br />
-              Wir haben deine Anfrage erhalten und melden uns per E-Mail, sobald
-              wir einen Termin für deinen Wunschmonat festgelegt haben.
-            </div>
           </div>
         </div>
       </div>
@@ -442,13 +443,20 @@
         const option = document.createElement("label");
         option.className = "month-option";
         option.innerHTML = `
-                <input type="radio" name="wunschmonat" value="${monthName} ${year}" ${
+                <input type="radio" name="wunschmonat_radio" value="${monthName} ${year}" ${
           i === 0 ? "required" : ""
         }>
                 <span class="month-label">${monthName}<br>${year}</span>
             `;
         monthGrid.appendChild(option);
       }
+      const hiddenMonthInput = document.getElementById("wunschmonat");
+
+      monthGrid.addEventListener("change", function (e) {
+        if (e.target.type === "radio") {
+          hiddenMonthInput.value = e.target.value;
+        }
+      });
     </script>
   </body>
 </html>
