@@ -10,6 +10,7 @@
   --hellgrau: #c0dde6d3;
   --weiss: #ffffff;
   --gelb: #a79228;
+  --gradient: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -458,7 +459,7 @@ section h2 {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: bold;
-  color: var(--anthrazit);
+  color: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 .form-group input,
 .form-group select,
