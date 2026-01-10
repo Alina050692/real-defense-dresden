@@ -10,7 +10,7 @@
   --hellgrau: #cbf9ff;
   --weiss: #ffffff;
   --gelb: #a79228;
-  --gradient: linear-gradient(135deg, #244b52 0%, #137799 100%);
+  --gradient: linear-gradient(135deg, #2f6169 0%, #137799 100%);
 }
 body {
   font-family: "Montserrat", sans-serif;
