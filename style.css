@@ -10,7 +10,7 @@
   --hellgrau: #cbf9ff;
   --weiss: #ffffff;
   --gelb: #a79228;
-  --gradient: linear-gradient(135deg, #326771 0%, #cbf9ff 100%);
+  --gradient: linear-gradient(135deg, #1c393f 0%, #b0f6ff 100%);
 }
 body {
   font-family: "Montserrat", sans-serif;
@@ -267,7 +267,7 @@ section h2 {
   background: var(--weiss);
 }
 .kurs-detail:nth-child(even) {
-  background: var(--hellgrau);
+  background: var(--weiss);
 }
 .kurs-detail h2 {
   text-align: center;
@@ -465,7 +465,7 @@ section h2 {
 .form-group textarea {
   width: 100%;
   padding: 0.8rem;
-  border: 2px solid var(--hellgrau);
+  border: 2px solid var(--anthrazit);
   border-radius: 5px;
   font-size: 1rem;
   font-family: inherit;
