@@ -231,6 +231,70 @@ section h2 {
   margin-bottom: 3rem;
   color: var(--dunkelblau);
 }
+/* News Banner */
+.news-banner {
+  background: linear-gradient(90deg, var(--news-orange) 0%, #ea580c 100%);
+  color: var(--weiss);
+  padding: 12px 0;
+  position: fixed;
+  width: 100%;
+  top: 70px; /* Unter der Navigation (passt an deine Nav-Höhe an) */
+  z-index: 999;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.news-banner-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+}
+
+.news-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.news-icon {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.news-date {
+  color: var(--weiss);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.news-course {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.news-banner-content:hover {
+  animation-play-state: paused;
+}
+
 /* Über uns */
 #ueber-uns {
   background: var(--weiss);
@@ -438,7 +502,9 @@ section h2 {
 }
 .kontakt-info p {
   margin: 1rem 0;
-} /* Buchungsformular */
+}
+
+/* Buchungsformular */
 .buchungsformular {
   background: var(--weiss);
   padding: 2.5rem;
@@ -572,6 +638,27 @@ a:visited {
 }
 
 /* Responsive */
+@media (max-width: 768px) {
+  .news-banner {
+    padding: 10px 0;
+    top: 60px;
+  }
+
+  .news-item {
+    font-size: 0.9rem;
+    padding: 0 2rem;
+  }
+
+  .news-icon {
+    padding: 6px 10px;
+    font-size: 0.8rem;
+  }
+
+  .news-course {
+    padding: 3px 10px;
+    font-size: 0.85rem;
+  }
+}
 @media (max-width: 992px) {
   #ueber-uns .ueber-uns-flex,
   .kurs-detail-flex {
