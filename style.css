@@ -17,6 +17,7 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: var(--petrol);
+  padding-top: 120px;
 }
 h1 {
   font-family: "Bebas Neue", sans-serif;
@@ -134,7 +135,6 @@ nav a:hover {
   color: var(--weiss);
   padding: 120px 2rem 80px;
   text-align: center;
-  margin-top: 60px;
   overflow: hidden;
   min-height: 500px;
   display: flex;
@@ -242,7 +242,7 @@ section h2 {
   top: 70px;
 
   /* Unter der Navigation (passt an deine Nav-Höhe an) */
-  z-index: 999;
+  z-index: 1001;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
