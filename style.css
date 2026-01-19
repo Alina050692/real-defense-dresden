@@ -219,7 +219,7 @@ nav a:hover {
 }
 /* News Banner */
 .news-banner {
-  background: linear-gradient(90deg, var(--news-orange) 0%, #ea580c 100%);
+  background: linear-gradient(90deg, var(--news-orange) 0%, #ea990c 100%);
   color: var(--weiss);
   padding: 14px 0;
   width: 100%;
