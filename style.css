@@ -238,7 +238,9 @@ section h2 {
   padding: 12px 0;
   position: fixed;
   width: 100%;
-  top: 70px; /* Unter der Navigation (passt an deine Nav-Höhe an) */
+  top: 70px;
+
+  /* Unter der Navigation (passt an deine Nav-Höhe an) */
   z-index: 999;
   overflow: hidden;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
