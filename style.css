@@ -247,7 +247,7 @@ nav a:hover {
 }
 
 .news-icon {
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.129);
   padding: 8px 12px;
   border-radius: 20px;
   margin-right: 15px;
@@ -477,9 +477,6 @@ section h2 {
 .vorteil-item h3 {
   color: var(--dunkelblau);
   margin-bottom: 0.5rem;
-}
-.vorteil-item p {
-  font-weight: bold;
 }
 
 /* Kontakt */
