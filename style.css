@@ -252,6 +252,7 @@ section h2 {
   align-items: center;
   white-space: nowrap;
   animation: scroll-left 20s linear infinite;
+  width: max-content;
 }
 
 .news-item {
