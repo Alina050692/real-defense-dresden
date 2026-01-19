@@ -17,7 +17,7 @@ body {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6;
   color: var(--petrol);
-  padding-top: 110px;
+  padding-top: 70px;
 }
 h1 {
   font-family: "Bebas Neue", sans-serif;
@@ -129,72 +129,6 @@ nav a {
 nav a:hover {
   color: var(--gelb);
 }
-/* News Banner */
-.news-banner {
-  background: linear-gradient(90deg, var(--news-orange) 0%, #ea580c 100%);
-  color: var(--weiss);
-  padding: 12px 0;
-  position: fixed;
-  width: 100%;
-  top: 70px;
-
-  /* Unter der Navigation (passt an deine Nav-Höhe an) */
-  z-index: 1001;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-}
-
-.news-banner-content {
-  display: flex;
-  align-items: center;
-  white-space: nowrap;
-  animation: scroll-left 20s linear infinite;
-  width: max-content;
-}
-
-.news-item {
-  display: inline-flex;
-  align-items: center;
-  padding: 0 3rem;
-  font-size: 1rem;
-  font-weight: 600;
-}
-
-.news-icon {
-  background: rgba(255, 255, 255, 0.2);
-  padding: 8px 12px;
-  border-radius: 5px;
-  margin-right: 15px;
-  font-weight: bold;
-  font-size: 0.9rem;
-}
-
-.news-date {
-  color: var(--weiss);
-  font-weight: bold;
-  margin-right: 8px;
-}
-
-.news-course {
-  background: rgba(255, 255, 255, 0.25);
-  padding: 4px 12px;
-  border-radius: 20px;
-  margin-left: 10px;
-  font-size: 0.9rem;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-.news-banner-content:hover {
-  animation-play-state: paused;
-}
 
 /* Hero Section mit Video */
 #hero {
@@ -282,6 +216,70 @@ nav a:hover {
 }
 .btn-light:hover {
   background: var(--gelb);
+}
+/* News Banner */
+.news-banner {
+  background: linear-gradient(90deg, var(--news-orange) 0%, #ea580c 100%);
+  color: var(--weiss);
+  padding: 14px 0;
+  width: 100%;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  position: sticky;
+  top: 0;
+  z-index: 5;
+}
+
+.news-banner-content {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  animation: scroll-left 20s linear infinite;
+  width: max-content;
+}
+
+.news-item {
+  display: inline-flex;
+  align-items: center;
+  padding: 0 3rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.news-icon {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 8px 12px;
+  border-radius: 5px;
+  margin-right: 15px;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+.news-date {
+  color: var(--weiss);
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.news-course {
+  background: rgba(255, 255, 255, 0.25);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-left: 10px;
+  font-size: 0.9rem;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.news-banner-content:hover {
+  animation-play-state: paused;
 }
 /* Container */
 .container {
